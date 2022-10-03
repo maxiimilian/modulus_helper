@@ -16,11 +16,11 @@ which enables communication between your local machine and the Modulus Docker co
 SSH tunnels connect a port on your desktop (local machine), e.g. XXXX, with a remote port 
 on your workstation, e.g. YYYY:
 ```shell
-ssh -p XXXX:localhost:YYYY workstation
+ssh -L XXXX:localhost:YYYY workstation
 ```
 
 ## Access through Jupyter Lab
-- Open a terminal **on your desktop** and ssh into the workstation: `ssh -P 1234:localhost:1234 workstation`
+- Open a terminal **on your desktop** and ssh into the workstation: `ssh -L 1234:localhost:1234 workstation`
 - Navigate to cloned repo `modulus_helper` and enter the `modulus_jupyter` directory
 - Running `start_modulus.sh` with root rights (i.e. `sudo start_modulus.sh`) will do two things:
   - Start Jupyter Lab on the workstation with Modulus enabled
